@@ -1,0 +1,10 @@
+<input type="text" #a > <label>a</label>
+<input type="text" #ogg > <label>oggetto</label>
+<input type="text" #txt > <label>testo</label>
+<button (click)="snedMail(a,ogg,txt)">invia</button>
+
+<ul>
+  <li *ngFor="let e of vettMail">
+    <app-sent-email [email] = "e"></app-sent-email>
+  </li>
+</ul>
